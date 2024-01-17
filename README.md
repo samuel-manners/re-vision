@@ -12,6 +12,10 @@ git clone https://github.com/samuel-manners/re-vision.git
 ```
 
 ## Running Project
+When first running the project, use node package manager (npm) to intall all packages required for the project using the following command
+```bash
+npm install
+```
 To run this project, navigate to the project folder and execute the following command:
 ```bash
 npm start
