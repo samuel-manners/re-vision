@@ -11,7 +11,7 @@ You will need to have NPM, NPX and preferably Yarn previously installed on your 
 git clone https://github.com/samuel-manners/re-vision.git
 ```
 
-##Running Project
+## Running Project
 To run this project, navigate to the project folder and execute the following command:
 ```bash
 npm start
