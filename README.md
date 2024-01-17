@@ -5,16 +5,15 @@ the app natively on their device.
 
 ## Installation
 
-Add instructions for required stuff like NPM, NPX e.c.t.
-
-Then, clone this repository to your local machine using the command:
+You will need to have NPM, NPX and preferably Yarn previously installed on your device. Once these are prepared clone this repository to your local machine using the command:
 
 ```bash
-git clone https://github.com/username/hello-world.git
+git clone https://github.com/samuel-manners/re-vision.git
+```
 
-Usage
+##Running Project
 To run this project, navigate to the project folder and execute the following command:
-
+```bash
 npm start
-
-You should see your browser open to an address of "localhost:3000" with the app running within your browser
+```
+This should start up a server on localhost:3000 and open the web application up in your default browser for use.
