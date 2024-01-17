@@ -1,11 +1,14 @@
+//App Imports
 import React from 'react';
 import './App.css';
 
+//Component Imports
+import Camera from './components/main/Camera';
+
 function App() {
-  //add components into gif and into imports
   return (
     <div className="App">
-      
+      <Camera/>
     </div>
   );
 }
