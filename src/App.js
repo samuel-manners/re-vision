@@ -3,14 +3,14 @@ import React from 'react';
 import './App.css';
 
 //Component Imports
-import Logo from './components/header/Logo';
-import Camera from './components/main/Camera';
+import Header from './components/header/header';
+import MainScreen from './components/main/main';
 
 function App() {
   return (
     <div className="App">
-      <Logo/>
-      <Camera/>
+      <Header/>
+      <MainScreen/>
     </div>
   );
 }
