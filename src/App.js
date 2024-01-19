@@ -4,7 +4,7 @@ import './App.css';
 
 //Component Imports
 import Header from './components/header/header';
-import MainScreen from './components/main/main';
+import MainScreen from './pages/main';
 
 function App() {
   return (
