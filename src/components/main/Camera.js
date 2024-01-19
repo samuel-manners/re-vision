@@ -1,3 +1,5 @@
+//Code Ref: https://blog.logrocket.com/using-react-webcam-capture-display-images/
+
 // import useRef, useState, useCallback, useEffect
 import { useRef, useState, useCallback, useEffect } from "react";
 // import Webcam component

@@ -1,6 +1,6 @@
 //App Imports
 import React from 'react';
-import Camera from '../components/main/components/Camera';
+import Camera from '../components/main/Camera';
 
 function App() {
   return (
