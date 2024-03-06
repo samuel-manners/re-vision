@@ -1,5 +1,5 @@
 // Convert data URI to binary array
-export function dataURItoBlob(dataURI) {
+export default async function dataURItoBlob(dataURI) {
     // Split the data URI into parts
     let parts = dataURI.split(",");
     // Get the content type (image/jpeg)
