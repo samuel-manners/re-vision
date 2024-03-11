@@ -1,7 +1,7 @@
 //Code Ref: https://blog.logrocket.com/using-react-webcam-capture-display-images/
 import { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
-import sendImageToAPI from './functions/uploadImage.js';
+import sendImageToAPI from '../functions/uploadImage.js';
 import './Camera.css';
 
 const Camera = () => {

@@ -6,6 +6,7 @@ import React from 'react';
 //Component Imports
 import Header from './components/header/header.js';
 import MainScreen from'./pages/main.js';
+import SearchBar from './components/search/searchbar.js';
 import Search from './components/search/Search.js';
 
 const initialDetails = [
@@ -19,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header/>
+      <SearchBar/>
       <MainScreen/>
       <Search details={initialDetails}/>
     </div>
