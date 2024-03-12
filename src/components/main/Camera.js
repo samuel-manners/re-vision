@@ -9,7 +9,7 @@ const Camera = () => {
   const webcamRef = useRef(null); // create a webcam reference
   const [imgSrc, setImgSrc] = useState(null); // initialize it
   const navigate = useNavigate();
-  
+
   // Camera Functions
   const capture = useCallback(() => {
     const capturedImage = webcamRef.current.getScreenshot();
@@ -17,11 +17,12 @@ const Camera = () => {
   }, [webcamRef]);
 
   async function sendPhoto() {
-    const searchResults = await sendImageToAPI(imgSrc);
-    console.log(searchResults);
+    const results = await sendImageToAPI(imgSrc);
+    const jsonResults = JSON.stringify(results);
+    const url = '/searchResults/' + jsonResults;
+    navigate(url)
     //To-Do
     //Send to Search Component
-    navigate('/searchResults')
   }
 
   const retake = () => {
@@ -29,16 +30,16 @@ const Camera = () => {
   };
 
   return (
-    <div className="camera-container">
-      {imgSrc ? (
-        <img src={imgSrc} alt="webcam" />
-      ) : (
-        <Webcam
-          ref={webcamRef}
-          screenshotFormat="image/jpeg"
-          screenshotQuality={0.8}
-        />
-      )}
+      <div className="camera-container">
+        {imgSrc ? (
+          <img src={imgSrc} alt="webcam" />
+        ) : (
+          <Webcam
+            ref={webcamRef}
+            screenshotFormat="image/jpeg"
+            screenshotQuality={0.8}
+          />
+        )}
       <div className="btn-container">
 
         {imgSrc ? (
@@ -59,6 +60,52 @@ const Camera = () => {
         )}
       </div>
     </div>
+
   );
 };
+
+/*
+const capture = useCallback(() => {
+  const capturedImage = webcamRef.current.getScreenshot();
+  setImgSrc(capturedImage);
+  return (capturedImage);
+})
+
+async function sendPhoto() {
+  const searchResults = await sendImageToAPI(imgSrc);
+  console.log(searchResults);
+  //To-Do
+  //Send to Search Component
+  // navigate('/searchResults')
+  return searchResults;
+}
+
+const retake = () => {
+  setImgSrc(null);
+};
+*/
+
+
 export default Camera;
+
+/*
+      <div className="btn-container">
+
+        {imgSrc ? (
+          <>
+            <button
+              className='retake-button'
+              onClick={retake}>Retake photo</button>
+            <button
+              className='send-button'
+              onClick={sendPhoto}>Detect Items</button>
+          </>
+        ) : (
+          <>
+            <button
+              className='capture-button'
+              onClick={capture}>Capture photo</button>
+          </>
+        )}
+      </div>
+      */

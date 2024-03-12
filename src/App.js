@@ -24,8 +24,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainScreen />} />
           <Route path="/searchResults" element={<Search />} />
+          <Route path="/searchResults/:image" element={<Search />} />
         </Routes>
-        <BottomMenu />
+        <BottomMenu/>
       </BrowserRouter>
     </div>
   );
