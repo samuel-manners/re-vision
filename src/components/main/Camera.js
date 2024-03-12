@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import sendImageToAPI from '../functions/uploadImage.js';
 import './Camera.css';
 
+const FACING_MODE_ENVIRONMENT = "environment";
+
 const Camera = () => {
   const webcamRef = useRef(null); // create a webcam reference
   const [imgSrc, setImgSrc] = useState(null); // initialize it
@@ -29,6 +31,13 @@ const Camera = () => {
     setImgSrc(null);
   };
 
+  const videoConstraints = {
+    facingMode: 'environment', // Set to 'environment' for rear camera
+    width: { min: 480 },
+    height: { min: 720 },
+  };
+
+
   return (
       <div className="camera-container">
         {imgSrc ? (
@@ -38,6 +47,7 @@ const Camera = () => {
             ref={webcamRef}
             screenshotFormat="image/jpeg"
             screenshotQuality={0.8}
+            videoConstraints={videoConstraints}
           />
         )}
       <div className="btn-container">

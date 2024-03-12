@@ -7,15 +7,6 @@ import { useParams } from "react-router-dom";
 //import sendImageToAPI from '../components/functions/uploadImage.js';
 //To-Do Send API Import
 
-const initialDetails = [
-    { id: 1, name: "Coca-Cola Can", brand: "Coca-Cola", description: "Beverage Can" },
-    { id: 2, name: "Diet Coke Can", brand: "Coca-Cola", description: "Beverage Can" },
-    { id: 3, name: "Coca-Cola Bottle", brand: "Coca-Cola", description: "Plastic Beverage Bottle" },
-    { id: 4, name: "Diet Coke Bottle", brand: "Coca-Cola", description: "Plastic Beverage Bottle" }
-];
-
-const inputJson = '[{"UPC":null,"name":"Coca-Cola Can","description":"Beverage can","is_recyclable":1,"packaging_material":"Aluminum","brand":"The Coca-Cola Company"},{"UPC":null,"name":"Diet Coke Can","description":"Beverage Can","is_recyclable":1,"packaging_material":"Aluminium","brand":"The Coca-Cola Company"}]';
-
 function SearchResultsPage() {
     
     const images = useParams();
