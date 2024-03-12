@@ -1,12 +1,14 @@
 //Code Ref: https://blog.logrocket.com/using-react-webcam-capture-display-images/
 import { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
+import { useNavigate } from 'react-router-dom';
 import sendImageToAPI from '../functions/uploadImage.js';
 import './Camera.css';
 
 const Camera = () => {
   const webcamRef = useRef(null); // create a webcam reference
   const [imgSrc, setImgSrc] = useState(null); // initialize it
+  const navigate = useNavigate();
   
   // Camera Functions
   const capture = useCallback(() => {
@@ -14,8 +16,12 @@ const Camera = () => {
     setImgSrc(capturedImage);
   }, [webcamRef]);
 
-  const sendPhoto = () => {
-    sendImageToAPI(imgSrc);
+  async function sendPhoto() {
+    const searchResults = await sendImageToAPI(imgSrc);
+    console.log(searchResults);
+    //To-Do
+    //Send to Search Component
+    navigate('/searchResults')
   }
 
   const retake = () => {

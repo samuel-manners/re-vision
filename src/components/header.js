@@ -1,13 +1,13 @@
+//App Imports
 import React from 'react';
 
-function LogoComponent() {
+function App() {
   return (
-    <div>
+    <div className="Header">
       <h1>Re-Vision</h1>
       <h2>AI Assisted Recycling</h2>
     </div>
   );
 }
 
-export default LogoComponent;
-
+export default App;
