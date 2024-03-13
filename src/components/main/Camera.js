@@ -22,9 +22,9 @@ const Camera = () => {
       const jsonResults = JSON.stringify(results);
       const url = '/searchResults/' + jsonResults;
       navigate(url)
+    } else{
+      console.log("No Results Recieved");
     }
-    //To-Do
-    //Send to Search Component
   }
 
   const retake = () => {
@@ -74,48 +74,4 @@ const Camera = () => {
   );
 };
 
-/*
-const capture = useCallback(() => {
-  const capturedImage = webcamRef.current.getScreenshot();
-  setImgSrc(capturedImage);
-  return (capturedImage);
-})
-
-async function sendPhoto() {
-  const searchResults = await sendImageToAPI(imgSrc);
-  console.log(searchResults);
-  //To-Do
-  //Send to Search Component
-  // navigate('/searchResults')
-  return searchResults;
-}
-
-const retake = () => {
-  setImgSrc(null);
-};
-*/
-
-
 export default Camera;
-
-/*
-      <div className="btn-container">
-
-        {imgSrc ? (
-          <>
-            <button
-              className='retake-button'
-              onClick={retake}>Retake photo</button>
-            <button
-              className='send-button'
-              onClick={sendPhoto}>Detect Items</button>
-          </>
-        ) : (
-          <>
-            <button
-              className='capture-button'
-              onClick={capture}>Capture photo</button>
-          </>
-        )}
-      </div>
-      */
