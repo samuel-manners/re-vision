@@ -31,8 +31,8 @@ const Camera = () => {
 
   const videoConstraints = {
     facingMode: 'environment', // Set to 'environment' for rear camera
-    width: { min: 480 },
-    height: { min: 720 },
+    width: { min: 240 },
+    height: { min: 360 },
   };
 
 
