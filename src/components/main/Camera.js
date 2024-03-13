@@ -5,8 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import sendImageToAPI from '../functions/uploadImage.js';
 import './Camera.css';
 
-const FACING_MODE_ENVIRONMENT = "environment";
-
 const Camera = () => {
   const webcamRef = useRef(null); // create a webcam reference
   const [imgSrc, setImgSrc] = useState(null); // initialize it
