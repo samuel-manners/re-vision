@@ -18,9 +18,11 @@ const Camera = () => {
 
   async function sendPhoto() {
     const results = await sendImageToAPI(imgSrc);
-    const jsonResults = JSON.stringify(results);
-    const url = '/searchResults/' + jsonResults;
-    navigate(url)
+    if (results != null) {
+      const jsonResults = JSON.stringify(results);
+      const url = '/searchResults/' + jsonResults;
+      navigate(url)
+    }
     //To-Do
     //Send to Search Component
   }
@@ -37,17 +39,17 @@ const Camera = () => {
 
 
   return (
-      <div className="camera-container">
-        {imgSrc ? (
-          <img src={imgSrc} alt="webcam" />
-        ) : (
-          <Webcam
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
-            screenshotQuality={0.8}
-            videoConstraints={videoConstraints}
-          />
-        )}
+    <div className="camera-container">
+      {imgSrc ? (
+        <img src={imgSrc} alt="webcam" />
+      ) : (
+        <Webcam
+          ref={webcamRef}
+          screenshotFormat="image/jpeg"
+          screenshotQuality={0.8}
+          videoConstraints={videoConstraints}
+        />
+      )}
       <div className="btn-container">
 
         {imgSrc ? (
