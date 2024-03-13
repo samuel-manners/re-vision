@@ -41,6 +41,10 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
   "scripts": {
     "predeploy": "npm run build",
     "start": "set HTTPS=true&&react-scripts start",
@@ -66,4 +70,5 @@
       "last 1 safari version"
     ]
   }
+
 }
