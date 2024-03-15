@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom';
 import './search.css';
 
 const SearchBar = () => {
-    const navigate = useNavigate();
     const [searchInput, setSearchInput] = useState("");
 
     const handleChange = (e) => {
