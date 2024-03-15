@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-rou
 
 //Component Imports
 import Header from './components/header.js';
-import BottomMenu from './components/bottomMenu.js';
 
 //Page Imports
 import MainScreen from './pages/main.js';
@@ -26,7 +25,6 @@ function App() {
           <Route path="/searchResults" element={<Search />} />
           <Route path="/searchResults/:image" element={<Search />} />
         </Routes>
-        <BottomMenu/>
       </BrowserRouter>
     </div>
   );
