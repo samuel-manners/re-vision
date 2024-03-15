@@ -1,8 +1,8 @@
 .camera-container {
     position: relative;
     width: 100%;
-    max-width: fit-content; /* Standard syntax */
     max-width: -moz-fit-content; /* Firefox-specific */
+    max-width: fit-content; /* Standard syntax */
     height: 100%;
     margin: 0 auto;
   }
