@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import './search.css';
 
 
 const SearchBar = () => {
-
+    const navigate = useNavigate();
     const [searchInput, setSearchInput] = useState("");
 
     const handleChange = (e) => {
@@ -24,7 +25,7 @@ const SearchBar = () => {
                 onChange={handleChange}
                 value={searchInput} />
             <button className='navButton' onClick={console.log('Search Button Pressed')}>🔎</button>
-            <button className='navButton' onClick={console.log('Search Button Pressed')}>🏠</button>
+            <button className='navButton' onClick={navigate('./')}>🏠</button>
             <button className='navButton' onClick={console.log('Search Button Pressed')}>♻️</button>
         </div>
     )
