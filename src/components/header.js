@@ -1,6 +1,6 @@
 //App Imports
 import React from 'react';
-import SearchBar from './search/searchbar.js';
+import SearchBar from './search/navBar.js';
 
 function App() {
   return (
