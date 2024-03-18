@@ -16,21 +16,41 @@ const SearchBar = () => {
         console.log('SearchBox in use');
     }
 
-    /*
-    const searchButton = () => {
 
+    const searchButton = async() => {
+        const results = await fetchData(searchInput);
+        tempDisableButtons()
+        const url = '/searchResults/' + JSON.stringify(results);
+        navigate(url)
     }
-*/
+
+    async function fetchData(query) {
+        const url = "https://re-vision-searchapi.azurewebsites.net/recycling_database_api?searchType='Name'&brand='" + query + "'";
+        try {
+            const response = await fetch(url, {
+                method: 'GET'
+            });
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Error fetching data:", error);
+        }
+    }
+
+
+
+
     const homeButton = () => {
         tempDisableButtons();
         navigate('/');
     }
 
-    /*
-    const eduButton = () => {
 
+    const eduButton = () => {
+        tempDisableButtons();
+        navigate('/recycleHub');
     }
-    */
+
 
     async function delay(ms) {
         return new Promise((resolve) => {
@@ -39,8 +59,9 @@ const SearchBar = () => {
     }
 
     const tempDisableButtons = async () => {
+        //Disabled buttons for one second
         setButtonDisabled(true);
-        await delay(1000);
+        await delay(250);
         setButtonDisabled(false);
     }
 
@@ -54,9 +75,9 @@ const SearchBar = () => {
                 placeholder="Search here"
                 onChange={handleChange}
                 value={searchInput} />
-            <button className='navButton' onClick={tempDisableButtons} disabled={isButtonDisabled}>🔎</button>
+            <button className='navButton' onClick={searchButton} disabled={isButtonDisabled}>🔎</button>
             <button className='navButton' onClick={homeButton} disabled={isButtonDisabled}>🏠</button>
-            <button className='navButton' onClick={tempDisableButtons} disabled={isButtonDisabled}>♻️</button>
+            <button className='navButton' onClick={eduButton} disabled={isButtonDisabled}>♻️</button>
         </div>
     )
 

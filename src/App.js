@@ -10,6 +10,7 @@ import Header from './components/header.js';
 //Page Imports
 import MainScreen from './pages/main.js';
 import Search from './pages/searchResults.js';
+import EducationHub from './pages/recycleHub.js';
 import ErrorPage from './pages/errorPage.js';
 
 
@@ -24,6 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainScreen />} />
           <Route path="/searchResults/:image" element={<Search />} />
+          <Route path='/recycleHub' element={<EducationHub/>} />
           <Route path="/error" element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
