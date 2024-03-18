@@ -23,7 +23,7 @@ const Camera = () => {
       const url = '/searchResults/' + jsonResults;
       navigate(url)
     } else{
-      console.log("No Results Recieved");
+      navigate('/error');
     }
   }
 
@@ -34,12 +34,13 @@ const Camera = () => {
   const videoConstraints = {
     facingMode: 'environment', // Set to 'environment' for rear camera
     width: { min: 360, max: 410},
-    height: {min: 540},
+    height: {min: 680},
   };
 
 
   return (
     <div className="camera-container">
+      <h4>Detect item by taking a picture of the brand logo</h4>
       {imgSrc ? (
         <img src={imgSrc} alt="webcam" />
       ) : (

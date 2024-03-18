@@ -10,6 +10,7 @@ import Header from './components/header.js';
 //Page Imports
 import MainScreen from './pages/main.js';
 import Search from './pages/searchResults.js';
+import ErrorPage from './pages/errorPage.js';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainScreen />} />
           <Route path="/searchResults/:image" element={<Search />} />
+          <Route path="/error" element={<ErrorPage/>}/>
         </Routes>
       </BrowserRouter>
     </div>
