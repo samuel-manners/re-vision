@@ -24,7 +24,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<MainScreen />} />
-          <Route path="/searchResults/:image" element={<Search />} />
+          <Route path="/searchResults/:response" element={<Search />} />
           <Route path='/recycleHub' element={<EducationHub/>} />
           <Route path="/error" element={<ErrorPage/>}/>
         </Routes>

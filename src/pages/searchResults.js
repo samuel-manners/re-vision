@@ -3,20 +3,14 @@ import React from 'react';
 import Search from '../components/search/Search.js';
 import { useParams } from "react-router-dom";
 
-
-//import sendImageToAPI from '../components/functions/uploadImage.js';
-//To-Do Send API Import
-
 function SearchResultsPage() {
     
-    const images = useParams();
-    const arrayOfImages = createArrayOfObjects(images.image);
-    console.log(arrayOfImages);
-
+    const response = useParams();
+    const arrayOfResponse = createArrayOfObjects(response.response);
 
     return (
         <div className="MainScreen">
-            <Search details={arrayOfImages} />
+            <Search details={arrayOfResponse} />
         </div>
     );
 }
@@ -31,11 +25,9 @@ function createArrayOfObjects(jsonString) {
         // Assuming each element in the array represents an object
         const arrayOfObjects = parsedData.map((item) => {
             return {
-                UPC: item.UPC,
                 name: item.name,
                 description: item.description,
-                is_recyclable: item.is_recyclable,
-                packaging_material: item.packaging_material,
+                recycleType: item.recycleType,
                 brand: item.brand,
             };
         });
