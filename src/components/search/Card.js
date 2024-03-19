@@ -7,6 +7,8 @@ function Card({item}) {
       <div>
         <h2>{item.name}</h2>
         <p>{item.description}</p>
+        <p>{item.brand}</p>
+        <p>{item.recycleType}</p>
       </div>
     </div>
   );

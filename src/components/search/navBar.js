@@ -12,16 +12,16 @@ const SearchBar = () => {
         setSearchInput(e.target.value);
     };
 
-    if (searchInput.length > 0) {
-        console.log('SearchBox in use');
-    }
-
-
-    const searchButton = async() => {
+    const searchButton = async () => {
         const results = await fetchData(searchInput);
         tempDisableButtons()
-        const url = '/searchResults/' + JSON.stringify(results);
-        navigate(url)
+        if (results != null) {
+            const jsonResults = JSON.stringify(results);
+            const url = '/searchResults/' + jsonResults;
+            navigate(url)
+          } else{
+            navigate('/error');
+          }
     }
 
     async function fetchData(query) {
@@ -76,7 +76,7 @@ const SearchBar = () => {
                 onChange={handleChange}
                 value={searchInput} />
             <button className='navButton' onClick={searchButton} disabled={isButtonDisabled}>🔎</button>
-            <button className='navButton' onClick={homeButton} disabled={isButtonDisabled}>🏠</button>
+            <button className='navButton' onClick={homeButton} disabled={isButtonDisabled}>📷</button>
             <button className='navButton' onClick={eduButton} disabled={isButtonDisabled}>♻️</button>
         </div>
     )

@@ -12,7 +12,7 @@ const Search = (details) => {
     const filterItems = (details, searchField) => {
         return details
             .filter(item => item.name.toLowerCase())
-            .map(item => ({ name: item.name, description: item.description }));
+            .map(item => ({ name: item.name, description: item.description, brand: item.brand, recycleType: item.recycleType }));
     };
 
     const filteredItems = filterItems(arrayItems, searchField);
