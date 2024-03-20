@@ -6,9 +6,9 @@ function Card({item}) {
     <div>
       <div>
         <h2>{item.name}</h2>
-        <p>{item.description}</p>
-        <p>{item.brand}</p>
-        <p>{item.recycleType}</p>
+        <p>Description: {item.description}</p>
+        <p>Brand: {item.brand}</p>
+        <p>Type of Recycling: {item.recycleType}</p>
       </div>
     </div>
   );
