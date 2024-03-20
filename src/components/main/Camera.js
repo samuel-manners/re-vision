@@ -3,7 +3,7 @@ import { useRef, useState, useCallback } from 'react';
 import Webcam from 'react-webcam';
 import { useNavigate } from 'react-router-dom';
 import sendImageToAPI from '../functions/uploadImage.js';
-import './Camera.css';
+import '../../components.css';
 
 const Camera = () => {
   const webcamRef = useRef(null); // create a webcam reference
