@@ -7,7 +7,7 @@ function Collapsible() {
 return (
     <div className="collapsible">
         <div className="header" {...getToggleProps()}>
-            {isExpanded ? 'Learn about Recycling Food Waste - Collapse' : 'Learn about Recycling Food Waste'}
+            {isExpanded ? 'Collapse Content' : 'Managing Food Waste'}
         </div>
         <div {...getCollapseProps()}>
         <div className='content'>

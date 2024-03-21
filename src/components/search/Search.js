@@ -20,7 +20,7 @@ const Search = (details) => {
     function searchList() {
         return (
             <Scroll>
-                <h3>Recyclable Items:</h3>
+                <h2>Recyclable Items:</h2>
                 <SearchList filteredItems={filteredItems} />
             </Scroll>
         );

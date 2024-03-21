@@ -5,7 +5,7 @@ function Card({item}) {
     //Card Div then details div
     <div>
       <div>
-        <h2>{item.name}</h2>
+        <h3>{item.name}</h3>
         <p>Description: {item.description}</p>
         <p>Brand: {item.brand}</p>
         <p>Type of Recycling: {item.recycleType}</p>

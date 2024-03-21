@@ -5,12 +5,12 @@ import '../../components.css';
 const LinkButton = () => {
 
     return (
-        <div>
+        <div className='linkButtonContainer'>
             <form action='https://www.gov.uk/recycling-collections'>
-                <button type="submit">Find out local recycling information - external 'gov.uk'</button>
+                <button className='linkButton' type="submit">Find out local recycling information - external 'gov.uk'</button>
             </form>
             <form action='https://www.recyclenow.com/recycling-locator'>
-                <button type="submit">Find your local recycling centre - external 'recyclenow.com</button>
+                <button className='linkButton' type="submit">Find your local recycling centre - external 'recyclenow.com</button>
             </form>
         </div>
     );

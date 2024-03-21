@@ -147,10 +147,10 @@
 
 .collapsible .content {
     padding: 6px;
-    background-color: #282c34;
+    background-color: #0e3115;
 }
 .collapsible .header {
-    background-color: #008316;
+    background-color: #00661d;
     padding: 6px;
     cursor: pointer;
 }
@@ -159,3 +159,36 @@ References:
 https://www.w3schools.com/howto/howto_css_searchbar.asp
 https://getcssscan.com/css-buttons-examples
 */
+
+/* ----- Other Component Styling ----- */
+.linkButton {
+    appearance: none;
+    background-color: #00661d;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 90%;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: text-wrap;
+}
+
+.linkButtonContainer {
+    display: flex;
+    /* Optional: Align buttons horizontally in the center */
+    justify-content: center;
+}
