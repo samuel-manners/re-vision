@@ -145,15 +145,6 @@
     font-size: 17px;
 }
 
-.collapsible .content {
-    padding: 6px;
-    background-color: #0e3115;
-}
-.collapsible .header {
-    background-color: #00661d;
-    padding: 6px;
-    cursor: pointer;
-}
 /*
 References:
 https://www.w3schools.com/howto/howto_css_searchbar.asp
@@ -185,10 +176,22 @@ https://getcssscan.com/css-buttons-examples
     touch-action: manipulation;
     vertical-align: middle;
     white-space: text-wrap;
+    margin-top: 10px;
 }
 
 .linkButtonContainer {
     display: flex;
     /* Optional: Align buttons horizontally in the center */
     justify-content: center;
+}
+
+.collapsible .content {
+    padding: 6px;
+    background-color: #0e3115;
+}
+.collapsible .header {
+    background-color: #00661d;
+    padding: 6px;
+    cursor: pointer;
+    margin-top: 2px;
 }
