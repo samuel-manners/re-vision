@@ -13,19 +13,7 @@ function Collapsible() {
             <div {...getCollapseProps()}>
                 <div className='content'>
                     <h3>Identifying Recycling</h3>
-                    <p>Knowing how to identify recycling types will help you to know how to recycle best. You can use Re-Visions search and AI Vision features to help you, and by using this guide you'll learn more about the types of recycling.</p>
-                    <h4>Recycling Types and ways to recycle:</h4>
-                    <ul>
-                        <li>Metals - Most regions offer metal recycling (e.g. canned goods, beverage cans) </li>
-                        <li>Plastics - Most regions offer plastic recycling (e.g. plastic bottles, food packaging)</li>
-                        <li>Paper & Cardboard - #SaveTheTrees: Most regions offer Paper & Cardboard recycling</li>
-                        <li>Shredded Paper - Some places offer either dropoff or curbside recycling for shredded paper.</li>
-                        <li>Clothes - These could be donated to a charity shop or clothes bank. Some can even be resold!</li>
-                        <li>Working Electrical Items - Some options include certain charity shops, trading in or selling the item.</li>
-                        <li>Broken Electrical Items - Accepted at most recycling centres, some areas offer curbside collection!</li>
-                        <li>Food - Is food recycling available in your area? Could you add it to your own or a community compost bin?</li>
-                        <li>Furniture - This can be donated to certain charity shops, put up on online marketplaces or take to a recycling centre</li>
-                    </ul>
+                    <p>Most items which are recyclable come with tags on their packaging informing you how to recycle. Here is a guide to some common recycling markers.</p>
                     <h4>Knowing your recycling symbols:</h4>
                     <div className='RecycleCard'>
                         <h4>Recycle</h4>
