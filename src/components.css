@@ -1,3 +1,16 @@
+/* ----- Header Styling Components ----- */
+.pageHeader {
+    text-align: center;
+    color: white;
+    font-size: 32px;
+}
+
+.pageSubHeader {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
 /* ----- Camera Component Styles ----- */
 .camera-container {
     position: relative;
@@ -11,20 +24,52 @@
     border: 2px solid #ccc;
     border-radius: 2px;
   }
-  
-  .capture-button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+
+  .camera-trigger{
+    width: 200px;
     background-color: #00960052;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 8px 16px;
-    cursor: pointer;
+    color: white;
     font-size: 16px;
-  }
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+.retake-trigger{
+    width: 150px;
+    background-color: #ff000070;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: 5%;
+}
+
+.send-trigger{
+    width: 150px;
+    background-color: #00360371;
+    color: white;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 30px;
+    left: 52%;
+}
+  
 
   .retake-button {
     position: absolute;

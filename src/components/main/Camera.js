@@ -39,7 +39,7 @@ const Camera = () => {
 
   return (
     <div className="camera-container">
-      <h4>Detect item by taking a picture of the brand logo</h4>
+      <h5>Detect item by taking a picture of the brand logo</h5>
       {imgSrc ? (
         <img src={imgSrc} alt="webcam" />
       ) : (
@@ -56,16 +56,16 @@ const Camera = () => {
         {imgSrc ? (
           <>
             <button
-              className='retake-button'
+              className='retake-trigger'
               onClick={retake}>Retake photo</button>
             <button
-              className='send-button'
+              className='send-trigger'
               onClick={sendPhoto}>Detect Items</button>
           </>
         ) : (
           <>
             <button
-              className='capture-button'
+              className='camera-trigger'
               onClick={capture}>Capture photo</button>
           </>
         )}
