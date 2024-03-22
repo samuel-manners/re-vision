@@ -25,7 +25,7 @@ const SearchBar = () => {
     }
 
     async function fetchData(query) {
-        const url = "http://localhost:8080/recycling_database_api?searchType='Name'&name='" + query + "'";
+        const url = "https://re-vision-searchapi.azurewebsites.net/recycling_database_api?searchType='Name'&name='" + query + "'";
         try {
             const response = await fetch(url, {
                 method: 'GET'

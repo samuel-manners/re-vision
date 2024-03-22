@@ -3,7 +3,7 @@ import axios from 'axios';
 export default async function sendImageToAPI(imageFile) {
     try {
         // Convert Image Type
-        const apiEndpoint = 'http://localhost:8080/cloudvisionapi';
+        const apiEndpoint = 'https://re-vision-searchapi.azurewebsites.net/cloudvisionapi';
         // Headers configuration
         const headers = { 'Content-Type': 'application/json' };
         const requestBody = { image: imageFile };
