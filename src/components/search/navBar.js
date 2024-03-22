@@ -19,19 +19,25 @@ const SearchBar = () => {
             const jsonResults = JSON.stringify(results);
             const url = '/searchResults/' + jsonResults;
             navigate(url)
-          } else{
-            navigate('/error');
-          }
+        } else {
+            alert('Item not found');
+        }
     }
 
     async function fetchData(query) {
-        const url = "https://re-vision-searchapi.azurewebsites.net/recycling_database_api?searchType='Name'&name='" + query + "'";
+        const url = "http://localhost:8080/recycling_database_api?searchType='Name'&name='" + query + "'";
         try {
             const response = await fetch(url, {
                 method: 'GET'
             });
-            const data = await response.json();
-            return data;
+
+            if (response.status === 404) {
+                //Returns no data if data couldn't be found
+                return null;
+            } else {
+                const data = await response.json();
+                return data;
+            }
         } catch (error) {
             console.error("Error fetching data:", error);
         }

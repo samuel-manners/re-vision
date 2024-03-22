@@ -9,7 +9,6 @@ const Search = (details) => {
 
 
     const filterItems = (details) => {
-        console.log(details);
         return details
             .filter(item => item.name.toLowerCase())
             .map(item => ({ name: item.name, description: item.description, brand: item.brand, recycleType: item.recycleType }));

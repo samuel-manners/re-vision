@@ -23,7 +23,7 @@ const Camera = () => {
       const url = '/searchResults/' + jsonResults;
       navigate(url)
     } else{
-      navigate('/error');
+      alert('No recyclable results found in image - Ensure logo is visible all images taken');
     }
   }
 
