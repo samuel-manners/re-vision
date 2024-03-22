@@ -33,8 +33,7 @@ const Camera = () => {
 
   const videoConstraints = {
     facingMode: 'environment', // Set to 'environment' for rear camera
-    width: { min: 360, max: 410},
-    height: {min: 680},
+    height: {min: 150, max:375},
   };
 
 
@@ -47,6 +46,7 @@ const Camera = () => {
         <Webcam
           ref={webcamRef}
           screenshotFormat="image/jpeg"
+          aria-orientation='vertical'
           screenshotQuality={0.8}
           videoConstraints={videoConstraints}
         />
