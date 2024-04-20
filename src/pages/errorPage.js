@@ -4,8 +4,9 @@ import React from 'react';
 function App() {
   return (
     <div className="ErrorPage">
-      <h3>Unexpected Error</h3>
-      <p>Sorry, we weren't able to produce the correct results.</p>
+      <h1>♻️Re-Vision♻️</h1>
+      <h3>Service Unavailable</h3>
+      <p>Thank you for testing Re-Vision!!! This app has been now been taken down temporarilly to work on services.</p>
     </div>
   );
 }

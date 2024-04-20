@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Header />
+      <Header />
         <Routes>
           <Route path="/" element={<MainScreen />} />
           <Route path="/searchResults/:response" element={<Search />} />
@@ -32,5 +32,15 @@ function App() {
     </div>
   );
 }
+//Code for app
+/*
+<Header />
+        <Routes>
+          <Route path="/" element={<MainScreen />} />
+          <Route path="/searchResults/:response" element={<Search />} />
+          <Route path='/recycleHub' element={<EducationHub/>} />
+          <Route path="/error" element={<ErrorPage/>}/>
+        </Routes>
+*/
 
 export default App;
