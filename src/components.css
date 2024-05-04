@@ -211,7 +211,7 @@ https://getcssscan.com/css-buttons-examples
     font-size: 14px;
     font-weight: 600;
     line-height: 20px;
-    width: 95%;
+    width: 90%;
     padding: 6px 16px;
     position: relative;
     text-align: center;
@@ -219,11 +219,6 @@ https://getcssscan.com/css-buttons-examples
     vertical-align: middle;
     white-space: text-wrap;
     margin-top: 10px;
-}
-
-.linkButtonContainer {
-    display: flex;
-    justify-content: center;
 }
 
 .collapsible .content {

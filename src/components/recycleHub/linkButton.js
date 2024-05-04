@@ -5,7 +5,7 @@ import '../../components.css';
 const LinkButton = () => {
 
     return (
-        <div className='linkButtonContainer'>
+        <div>
             <form action='https://www.recyclenow.com/recycling-locator'>
                 <button className='linkButton' type="submit">Recycle Locally - Recycle Now</button>
             </form>
