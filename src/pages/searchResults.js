@@ -1,6 +1,7 @@
 //App Imports
 import React from 'react';
 import Search from '../components/search/Search.js';
+import LinkButton from '../components/recycleHub/linkButton.js';
 import { useParams } from "react-router-dom";
 
 function SearchResultsPage() {
@@ -11,6 +12,7 @@ function SearchResultsPage() {
     return (
         <div className="MainScreen">
             <Search details={arrayOfResponse} />
+            <LinkButton/>
         </div>
     );
 }

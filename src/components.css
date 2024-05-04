@@ -223,7 +223,6 @@ https://getcssscan.com/css-buttons-examples
 
 .linkButtonContainer {
     display: flex;
-    /* Optional: Align buttons horizontally in the center */
     justify-content: center;
 }
 
