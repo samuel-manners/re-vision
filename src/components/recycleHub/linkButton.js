@@ -7,7 +7,7 @@ const LinkButton = () => {
     return (
         <div className='linkButtonContainer'>
             <form action='https://www.recyclenow.com/recycling-locator'>
-                <button className='linkButton' type="submit">Find your local recycling centre - external 'recyclenow.com</button>
+                <button className='linkButton' type="submit">How to recycle locally - external tool</button>
             </form>
         </div>
     );
