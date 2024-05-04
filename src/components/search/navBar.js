@@ -24,6 +24,7 @@ const SearchBar = () => {
         }
     }
 
+
     async function fetchData(query) {
         const url = "https://re-vision-searchapi.azurewebsites.net/recycling_database_api?searchType='Name'&name='" + query + "'";
         try {
@@ -80,7 +81,8 @@ const SearchBar = () => {
                 type="search"
                 placeholder="Search here"
                 onChange={handleChange}
-                value={searchInput} />
+                value={searchInput}
+                onKeyDown={searchButton} />
             <button className='navButton' onClick={searchButton} disabled={isButtonDisabled}>🔎</button>
             <button className='navButton' onClick={homeButton} disabled={isButtonDisabled}>📷</button>
             <button className='navButton' onClick={eduButton} disabled={isButtonDisabled}>♻️</button>
