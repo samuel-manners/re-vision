@@ -2,7 +2,7 @@ import './index.css';
 import React from 'react';
 import ReactDOM from 'react-dom/client'
 import App from './App.js'
-import { register, unregister } from './serviceWorkerRegistration.js'
+import { register } from './serviceWorkerRegistration.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

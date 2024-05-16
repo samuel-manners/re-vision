@@ -11,7 +11,6 @@ export default async function sendImageToAPI(imageFile) {
 
         // Make a POST request to the API with the image data
         var response = await axios.post(apiEndpoint, requestBody, { headers });
-        var data = response.data;
         if (response.status === 404) {
             //Returns no data if data couldn't be found
             return null;

@@ -24,7 +24,6 @@ const SearchBar = () => {
         }
     }
 
-
     async function fetchData(query) {
         const url = "https://re-vision-searchapi.azurewebsites.net/recycling_database_api?searchType='Name'&name='" + query + "'";
         try {
@@ -43,21 +42,17 @@ const SearchBar = () => {
             console.error("Error fetching data:", error);
         }
     }
-
-
-
-
+    //Buttons temporarily disable themselves whilst managing page
+    //Then use the navigate functionality from the react-router-dom framework to change the page
     const homeButton = () => {
         tempDisableButtons();
         navigate('/');
     }
 
-
     const eduButton = () => {
         tempDisableButtons();
         navigate('/recycleHub');
     }
-
 
     async function delay(ms) {
         return new Promise((resolve) => {
@@ -66,13 +61,11 @@ const SearchBar = () => {
     }
 
     const tempDisableButtons = async () => {
-        //Disabled buttons for one second
+        //Disables buttons for one second
         setButtonDisabled(true);
         await delay(250);
         setButtonDisabled(false);
     }
-
-
 
     return (
         <div>
@@ -81,14 +74,12 @@ const SearchBar = () => {
                 type="search"
                 placeholder="Search here"
                 onChange={handleChange}
-                value={searchInput}
-                onKeyDown={searchButton} />
+                value={searchInput} />
             <button className='navButton' onClick={searchButton} disabled={isButtonDisabled}>🔎</button>
             <button className='navButton' onClick={homeButton} disabled={isButtonDisabled}>📷</button>
             <button className='navButton' onClick={eduButton} disabled={isButtonDisabled}>♻️</button>
         </div>
     )
-
 };
 
 export default SearchBar;

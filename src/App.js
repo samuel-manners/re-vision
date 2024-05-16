@@ -12,12 +12,10 @@ import MainScreen from './pages/main.js';
 import Search from './pages/searchResults.js';
 import EducationHub from './pages/recycleHub.js';
 import ErrorPage from './pages/errorPage.js';
+import DataUsage from './pages/dataUsage.js';
 
-
+//App uses Router to enable single page web-application experience
 function App() {
-  //To-Do
-  //Add React Router - Ref: https://www.codeconcisely.com/posts/react-navigation/
-  //Enable Search Results through API details
   return (
     <div className="App">
       <BrowserRouter>
@@ -27,20 +25,12 @@ function App() {
           <Route path="/searchResults/:response" element={<Search />} />
           <Route path='/recycleHub' element={<EducationHub/>} />
           <Route path="/error" element={<ErrorPage/>}/>
+          <Route path="/dataUsage" element={<DataUsage/>}/>
         </Routes>
       </BrowserRouter>
+      <a href="/dataUsage">How your data is used</a>
     </div>
   );
 }
-//Code for app
-/*
-<Header />
-        <Routes>
-          <Route path="/" element={<MainScreen />} />
-          <Route path="/searchResults/:response" element={<Search />} />
-          <Route path='/recycleHub' element={<EducationHub/>} />
-          <Route path="/error" element={<ErrorPage/>}/>
-        </Routes>
-*/
 
 export default App;
