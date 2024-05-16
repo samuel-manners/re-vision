@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../components.css';
-//Code Ref: https://www.w3docs.com/snippets/html/how-to-create-an-html-button-that-acts-like-a-link.html
 
 const LinkButton = () => {
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { useCollapse } from 'react-collapsed';
-//CodeRef:
 
 function Collapsible() {
     const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
@@ -56,5 +55,3 @@ function App() {
     );
 }
 export default App;
-
-//https://www.recyclenow.com/recycling-locator?rlw-initial-path=local-authority/search

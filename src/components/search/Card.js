@@ -13,6 +13,6 @@ function Card({item}) {
     </div>
   );
 }
-//Code for adding image to card
+//If feasible - code for adding image to card
 //<img className="br-100 h3 w3 dib" alt={item.name} src={process.env.PUBLIC_URL + person.imgPath} />
 export default Card;
